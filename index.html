@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <!-- Importar CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Catálogo de Ropa</h1>
+
+  <!-- Catálogo de productos -->
+  <div class="catalogo">
+
+    <!-- ============================
+         Producto 1
+         Para agregar más productos copia este bloque
+         ============================ -->
+    <div class="producto">
+      <img src="/img/Imagen1.jpg" alt="Sport mono de un solo color con tirantes">
+      <h3>Sport mono de un solo color con tirantes</h3>
+
+      <label>Color:</label>
+      <select id="color1">
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+        <option value="Azul">Azul</option>
+      </select>
+
+      <label>Talla:</label>
+      <select id="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+
+      <label>Nombre:</label>
+      <input type="text" id="nombre1" placeholder="Escribe tu nombre">
+
+      <!-- Botones para pedir por WhatsApp o Correo -->
+      <button class="btn" onclick="pedir(1, 'Camisa Blanca', 'whatsapp')">Pedir por WhatsApp</button>
+      <button class="btn btn-email" onclick="pedir(1, 'Camisa Blanca', 'correo')">Pedir por Correo</button>
+    </div>
+    <!-- ============================ -->
+
+    <!-- Producto 2 -->
+    <div class="producto">
+      <img src="/img/Imagen2.jpg" alt="Short largo deportivo">
+      <h3>Short largo deportivo</h3>
+
+      <label>Color:</label>
+      <select id="color2">
+        <option value="Azul">Azul</option>
+        <option value="Negro">Negro</option>
+        <option value="Gris">Gris</option>
+      </select>
+
+      <label>Talla:</label>
+      <select id="talla2">
+        <option value="28">28</option>
+        <option value="30">30</option>
+        <option value="32">32</option>
+        <option value="34">34</option>
+      </select>
+
+      <label>Tu nombre:</label>
+      <input type="text" id="nombre2" placeholder="Escribe tu nombre">
+
+      <button class="btn" onclick="pedir(2, 'Pantalón Jeans', 'whatsapp')">Pedir por WhatsApp</button>
+      <button class="btn btn-email" onclick="pedir(2, 'Pantalón Jeans', 'correo')">Pedir por Correo</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto">
+      <img src="/img/Imagen3.jpg" alt="Short deportivo">
+      <h3>Short deportivo</h3>
+
+      <label>Color:</label>
+      <select id="color2">
+        <option value="Azul">Azul</option>
+        <option value="Negro">Negro</option>
+        <option value="Gris">Gris</option>
+      </select>
+
+      <label>Talla:</label>
+      <select id="talla2">
+        <option value="28">28</option>
+        <option value="30">30</option>
+        <option value="32">32</option>
+        <option value="34">34</option>
+      </select>
+
+      <label>Tu nombre:</label>
+      <input type="text" id="nombre2" placeholder="Escribe tu nombre">
+
+      <button class="btn" onclick="pedir(2, 'Pantalón Jeans', 'whatsapp')">Pedir por WhatsApp</button>
+      <button class="btn btn-email" onclick="pedir(2, 'Pantalón Jeans', 'correo')">Pedir por Correo</button>
+    </div>
+
+  </div>
+
+  <!-- Importar el JS -->
+  <script src="script.js"></script>
+</body>
+</html>
