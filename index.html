@@ -1,112 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Fuente de google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
-  <!-------------------------------------------------------------------------------------------------------->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Ropa</title>
-  <!-- Importar CSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitStyle Ropa</title>
+
+  <!-- CSS (vacío por ahora) -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Si quieres usar una fuente de Google, la pegas aquí (opcional) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">FitStyle Ropa</a>
 
-  <h1>CATÁLOGO DE ROPA</h1>
-
-  <!-- Catálogo de productos -->
-  <div class="catalogo">
-
-    <!-- ============================
-         Producto 1
-         Para agregar más productos copia este bloque
-         ============================ -->
-    <div class="producto">
-      <img src="img/Imagen1.jpg" alt="Sport mono de un solo color con tirantes">
-      <h3>Sport mono de un solo color con tirantes</h3>
-
-      <label>Color:</label>
-      <select id="color1">
-        <option value="Blanco">Blanco</option>
-        <option value="Negro">Negro</option>
-        <option value="Azul">Azul</option>
-      </select>
-
-      <label>Talla:</label>
-      <select id="talla1">
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-      </select>
-
-      <label>Nombre:</label>
-      <input type="text" id="nombre1" placeholder="Escribe tu nombre">
-
-      <!-- Botones para pedir por WhatsApp o Correo -->
-      <button class="btn" onclick="pedir(1, 'Sport mono de un solo color con tirantes', 'whatsapp')">Pedir por WhatsApp</button>
-      <button class="btn btn-email" onclick="pedir(1, 'Sport mono de un solo color con tirantes', 'correo')">Pedir por Correo</button>
+      <nav class="main-nav">
+        <a href="#acerca">Acerca de</a>
+        <a href="#productos">Productos</a>
+      </nav>
     </div>
-    <!-- ============================ -->
+  </header>
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Muévete libre, luce increíble</h1>
+        <p>Ropa deportiva diseñada para mujeres modernas, activas y seguras de sí mismas.</p>
+        <a href="#productos" class="btn btn-primary">Ver productos</a>
+      </div>
 
-    <!-- Producto 2 -->
-    <div class="producto">
-      <img src="img/Imagen2.jpg" alt="Short largo deportivo">
-      <h3>Short largo deportivo</h3>
-
-      <label>Color:</label>
-      <select id="color2">
-        <option value="Azul">Azul</option>
-        <option value="Negro">Negro</option>
-        <option value="Gris">Gris</option>
-      </select>
-
-      <label>Talla:</label>
-      <select id="talla2">
-        <option value="28">28</option>
-        <option value="30">30</option>
-        <option value="32">32</option>
-        <option value="34">34</option>
-      </select>
-
-      <label>Tu nombre:</label>
-      <input type="text" id="nombre2" placeholder="Escribe tu nombre">
-
-      <button class="btn" onclick="pedir(2, 'Short largo deportivo', 'whatsapp')">Pedir por WhatsApp</button>
-      <button class="btn btn-email" onclick="pedir(2, 'Short largo deportivo', 'correo')">Pedir por Correo</button>
+      <!-- Imagen del hero (la controlamos mejor con CSS) -->
+       <div class="hero-image">
+        <img src="/img/portada-1.png" alt="Modelo con ropa deportiva">
+       </div>
     </div>
+  </section>
 
-    <!-- Producto 3 -->
-    <div class="producto">
-      <img src="img/Imagen3.jpg" alt="Short deportivo">
-      <h3>Short deportivo</h3>
+  <!-- ========= BANNER ROSADO / CTA INFO CORTA ========= -->
+   <section class="cta-strip">
+    <div class="container cta-inner">
+      <p class="cta-text">Productos con materiales de alta calidad que garantizan durabilidad y frescura, porque sabemos que tu ropa debe estar a la altura de tu estilo</p>
 
-      <label>Color:</label>
-      <select id="color2">
-        <option value="Azul">Azul</option>
-        <option value="Negro">Negro</option>
-        <option value="Gris">Gris</option>
-      </select>
-
-      <label>Talla:</label>
-      <select id="talla2">
-        <option value="28">28</option>
-        <option value="30">30</option>
-        <option value="32">32</option>
-        <option value="34">34</option>
-      </select>
-
-      <label>Tu nombre:</label>
-      <input type="text" id="nombre2" placeholder="Escribe tu nombre">
-
-      <button class="btn" onclick="pedir(2, 'Short deportivo', 'whatsapp')">Pedir por WhatsApp</button>
-      <button class="btn btn-email" onclick="pedir(2, 'Short deportivo', 'correo')">Pedir por Correo</button>
+      <!-- CTA a la derecha -->
+       <div class="cta-action">
+        <a href="#productos" class="btn btn-cta">¡Haz tu pedido ya!</a>
+       </div>
     </div>
+   </section>
 
-  </div>
+   <!-- ========= SECCIÓN "Más que ropa: impulso..." ========= -->
+    <section id="acerca" class="beneficios">
+      <div class="container beneficios-inner">
+        <!-- Texto / columna izquierda (puede ir a la izquierda o derecha según diseño) -->
+         <div class="beneficios-text">
+          <h2>Más que ropa: impulso para tu mejor versión</h2>
+          <p class="lead">En FitStyle Ropa creemos que la ropa deportiva debe ser más que funcional: debe inspirar confianza, resaltar tu figura y acompañarte en cada movimiento. Por eso ofrecemos prendas resistentes, con ajuste perfecto y en múltiples tallas y colores.</p>
 
-  <!-- Importar el JS -->
-  <script src="script.js"></script>
+          <!-- Lista de puntos con título y descripción -->
+           <ul class="beneficios-list">
+            <li>
+              <!-- Aquí puedes usar un SVG pequeño o un icono -->
+               <span class="icon" aria-hidden="true">🏷️</span>
+               <div class="item-text">
+                <strong>Diseños modernos y cómodos</strong>
+                <p>Cada prenda está pensada para realizar tu figura sin perder libertad de movimiento.</p>
+               </div>
+            </li>
+
+            <li>
+              <span class="icon" aria-hidden="true">🎨</span>
+              <div class="item-text">
+                <strong>Variedad de tallas y colores</strong>
+                <p>Gran gama de colores y tallas para que siempre encuentres la prenda perfecta.</p>
+              </div>
+            </li>
+
+            <li>
+              <span class="icon" aria-hidden="true">⚙️</span>
+              <div class="item-text">
+                <strong>Perfectos para entrenar</strong>
+                <p>Diseños funcionales que puedes usar tanto en el gym como en el día a día.</p>
+              </div>
+            </li>
+
+            <li>
+              <span class="icon" aria-hidden="true">✔️</span>
+              <div class="item-text">
+                <strong>Mayor confort y seguridad</strong>
+                <p>Materiales suaves y resistentes para mayor confianza en cada prenda.</p>
+              </div>
+            </li>
+           </ul>
+
+           <a href="#productos" class="btn btn-primary">Ver productos</a>
+         </div>
+
+         <!-- Imagen / columna derecha -->
+          <div class="beneficios-media">
+            <img src="/img/portada-2.png" alt="Collage de prendas FitStyle">
+          </div>
+      </div>
+    </section>
+
+    <!-- Sección de las tarjetas de los productos -->
+     <section id="productos" class="productos container">
+      <h2>Productos</h2>
+
+      <!-- Grid de productos -->
+       <div class="grid-productos">
+        <!-- Copia/pega la "tarjeta de producto" tantas veces como productos tengas -->
+         <!-- INICIA TARJETA DE PRODUCTO (duplicar para cada producto) -->
+          <article class="producto" data-id="1">
+            <!-- Imagen del producto (usa img/producto-1.jpg) -->
+             <img class="product-image" src="/img/Imagen1.jpg" alt="Short deportivo color café">
+
+            <!-- Datos visibles del producto -->
+             <div class="product-meta">
+              <h3 class="product-name">Nombre del producto</h3>
+              <p class="product-price">$384</p>
+             </div>
+
+            <!-- Opciones que el cliente seleccionará -->
+             <div class="product-controls">
+              <label>
+                Color:
+                <select class="product-color" name="color">
+                  <option value="Rojo">Rojo</option>
+                  <option value="Café">Cefé</option>
+                  <option value="Negro">Negro</option>
+                </select>
+              </label>
+
+              <label>
+                Talla:
+                <select class="product-size" name="size">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+              </label>
+
+              <label>
+                Nombre:
+                <input class="customer-name" type="text" name="customerName" placeholder="Escribe tu nombre">
+              </label>
+
+              <!-- Botones (funcionalidad la agregamos con JS) -->
+               <div class="product-actions">
+                <button class="btn btn-whatsapp">Pedir por WhatsApp</button>
+                <button class="btn btn-email">Pedir por Correo</button>
+               </div>
+             </div>
+          </article>
+          <!-- FIN TARJETA DE PRODUCTO -->
+       </div>
+     </section>
+
+     <footer class="site-footer">
+      <div class="container">
+        <h2>FitStyle Ropa</h2>
+        <p>“FitStyle Ropa - Viste tu mejor versión todos los días”</p>
+        <nav class="footer-nav">
+          <a href="#acerca">Acerca de</a>
+          <a href="#productos">Productos</a>
+        </nav>
+      </div>
+     </footer>
+  <!-- JS (deferred) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
