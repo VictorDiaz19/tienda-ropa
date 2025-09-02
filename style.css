@@ -1,0 +1,186 @@
+/* --- VARIABLES DE COLOR Y FUENTES --- */
+/* Definir aquí los colores principales nos ayuda a reutilizarlos fácilmente. */
+:root {
+  --color-rosa: #F6BAD4;
+  --color-primario: #111111; /* Negro para textos principales */
+  --color-secundario: #4F4F4F; /* Gris oscuro para textos secundarios */
+  --color-fondo: #FFFFFF;    /* Blanco */
+  --color-acento-whatsapp: #25D366;
+  --color-acento-email: #63C7B2;
+  --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* --- ESTILOS GLOBALES Y RESET BÁSICO --- */
+/* Esto elimina los márgenes por defecto del navegador y establece la fuente. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Hace que el manejo de tamaños sea más fácil */
+}
+
+html {
+  font-size: 16px; /* Tamaño base de la fuente */
+  scroll-behavior: smooth; /* Para que el scroll al hacer clic en los enlaces sea suave */
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-primario);
+  background-color: var(--color-fondo);
+}
+
+a {
+  text-decoration: none; /* Quitamos el subrayado de los enlaces */
+  color: inherit; /* Hereda el color del texto de su padre */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Evita espacios extra debajo de las imágenes */
+}
+
+/* --- CLASE CONTENEDOR --- */
+/* Esta clase la usas varias veces en tu HTML para centrar el contenido. */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 20px; /* Añade un poco de espacio a los lados */
+}
+
+
+/* --- ESTILOS DEL ENCABEZADO (HEADER) --- */
+.site-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0; /* Una línea sutil para separar */
+}
+
+.header-inner {
+  display: flex; /* Usamos Flexbox para alinear los elementos */
+  justify-content: space-between; /* Pone el logo a la izquierda y la nav a la derecha */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.logo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700; /* Letra en negrita */
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px; /* Espacio entre los enlaces "Acerca de" y "Productos" */
+}
+
+.main-nav a {
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  color: var(--color-secundario);
+  transition: color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.main-nav a:hover {
+  color: var(--color-primario); /* Cambia de color al pasar el ratón */
+}
+
+
+
+
+
+/* --- ESTILOS DE BOTONES (REUTILIZABLES) --- */
+/* Creamos un estilo base para todos los botones. */
+.btn {
+  display: inline-block; /* Para que respete el padding */
+  padding: 12px 28px;
+  border-radius: 50px;   /* Para que sea un "píldora" */
+  font-weight: 700;      /* Texto en negrita */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.btn:hover {
+  transform: translateY(-3px); /* Efecto sutil de "levantarse" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para el botón primario (negro) */
+.btn-primary {
+  background-color: var(--color-primario);
+  color: var(--color-fondo); /* Texto blanco */
+}
+
+
+/* --- ESTILOS DE LA SECCIÓN HERO --- */
+.hero {
+  padding: 80px 0; /* Espacio vertical para que la sección "respire" */
+  background-color: #FAFAFA; /* Un gris muy claro para diferenciarla del header */
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto y la imagen */
+  gap: 40px;           /* Espacio entre el texto y la imagen */
+}
+
+.hero-text {
+  flex: 1; /* Permite que el contenedor de texto ocupe el espacio disponible */
+}
+
+.hero-image {
+  flex: 1; /* Permite que el contenedor de imagen ocupe el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra la imagen si es más pequeña */
+}
+
+/* Estilos para el texto dentro del Hero */
+.hero-text h1 {
+  font-size: 3.5rem; /* 56px - un título grande e impactante */
+  font-weight: 700;
+  line-height: 1.2; /* Espacio entre líneas del título */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.125rem; /* 18px */
+  color: var(--color-secundario);
+  margin-bottom: 30px;
+  max-width: 500px; /* Evita que la línea de texto sea demasiado larga */
+}
+
+
+
+
+
+
+/* --- ESTILOS DEL BANNER ROSADO (CTA STRIP) --- */
+.cta-strip {
+  background-color: var(--color-rosa); /* Usamos la variable que definimos al inicio */
+  color: var(--color-fondo); /* Texto blanco */
+  padding: 30px 0;
+}
+
+.cta-inner {
+  display: flex;
+  justify-content: space-between; /* Texto a la izquierda, botón a la derecha */
+  align-items: center;
+  gap: 20px; /* Espacio entre texto y botón */
+}
+
+.cta-text {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 500;
+  flex: 3; /* Le damos más espacio al texto que al botón */
+}
+
+.cta-action {
+  flex: 1; /* Le damos menos espacio al botón */
+  text-align: right; /* Alineamos el botón a la derecha de su contenedor */
+}
+
+
+/* Estilo específico para el botón del CTA (blanco) */
+.btn-cta {
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-primario);       /* Texto negro */
+}
